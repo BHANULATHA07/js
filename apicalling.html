@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"/>
+    <title>Document</title>
+<style>
+    .main{
+        background-color: rgb(216, 234, 241);
+        display: flex;
+        flex-wrap: wrap;
+        gap: 5%;
+    }
+    .box{
+        padding: 2%;
+        height: 450px;
+        width: 250px;
+        border: 2px solid lightslategray;
+        margin: 2%;
+    }
+    .box img{
+        width: 90%;
+        height: auto;
+    }
+    .box img :hover{
+        transform:scale(1.05);
+    }
+    .head{
+        text-align: center;
+    }
+</style>
+
+</head>
+<a href="../index.html" ><i class="fa-solid fa-arrow-left fa-2xl" style="color: #74C0FC;"></i> </a> 
+<body>
+    <div class="head">
+        <h1>products</h1>
+    </div>
+    <div class="main">
+        <div class="box">
+            <img src="" alt="">
+            <h1></h1>
+            <h2></h2>
+            <p></p>
+        </div>
+        <div class="box">
+            <img src="" alt="">
+            <h1></h1>
+            <h2></h2>
+            <p></p>
+        </div>
+        <div class="box">
+            <img src="" alt="">
+            <h1></h1>
+            <h2></h2>
+            <p></p>
+        </div>
+        <div class="box">
+            <img src="" alt="">
+            <h1></h1>
+            <h2></h2>
+            <p></p>
+        </div>
+        <div class="box">
+            <img src="" alt="">
+            <h1></h1>
+            <h2></h2>
+            <p></p>
+        </div>
+        <div class="box">
+            <img src="" alt="">
+            <h1></h1>
+            <h2></h2>
+            <p></p>
+        </div>
+        <div class="box">
+            <img src="" alt="">
+            <h1></h1>
+            <h2></h2>
+            <p></p>
+        </div>
+        <div class="box">
+            <img src="" alt="">
+            <h1></h1>
+            <h2></h2>
+            <p></p>
+        </div>
+        <div class="box">
+            <img src="" alt="">
+            <h1></h1>
+            <h2></h2>
+            <p></p>
+        </div>
+        <div class="box">
+            <img src="" alt="">
+            <h1></h1>
+            <h2></h2>
+            <p></p>
+        </div>
+        <div class="box">
+            <img src="" alt="">
+            <h1></h1>
+            <h2></h2>
+            <p></p>
+        </div>
+        <div class="box">
+            <img src="" alt="">
+            <h1></h1>
+            <h2></h2>
+            <p></p>
+        </div>
+        <div class="box">
+            <img src="" alt="">
+            <h1></h1>
+            <h2></h2>
+            <p></p>
+        </div>
+        <div class="box">
+            <img src="" alt="">
+            <h1></h1>
+            <h2></h2>
+            <p></p>
+        </div>
+        <div class="box">
+            <img src="" alt="">
+            <h1></h1>
+            <h2></h2>
+            <p></p>
+        </div>
+        <div class="box">
+            <img src="" alt="">
+            <h1></h1>
+            <h2></h2>
+            <p></p>
+        </div>
+        <div class="box">
+            <img src="" alt="">
+            <h1></h1>
+            <h2></h2>
+            <p></p>
+        </div>
+        <div class="box">
+            <img src="" alt="">
+            <h1></h1>
+            <h2></h2>
+            <p></p>
+        </div>
+        <div class="box">
+            <img src="" alt="">
+            <h1></h1>
+            <h2></h2>
+            <p></p>
+        </div>
+        <div class="box">
+            <img src="" alt="">
+            <h1></h1>
+            <h2></h2>
+            <p></p>
+        </div>
+        <div class="box">
+            <img src="" alt="">
+            <h1></h1>
+            <h2></h2>
+            <p></p>
+        </div>
+        <div class="box">
+            <img src="" alt="">
+            <h1></h1>
+            <h2></h2>
+            <p></p>
+        </div>
+        <div class="box">
+            <img src="" alt="">
+            <h1></h1>
+            <h2></h2>
+            <p></p>
+        </div>
+        <div class="box">
+            <img src="" alt="">
+            <h1></h1>
+            <h2></h2>
+            <p></p>
+        </div>
+        <div class="box">
+            <img src="" alt="">
+            <h1></h1>
+            <h2></h2>
+            <p></p>
+        </div>
+        <div class="box">
+            <img src="" alt="">
+            <h1></h1>
+            <h2></h2>
+            <p></p>
+        </div>
+        <div class="box">
+            <img src="" alt="">
+            <h1></h1>
+            <h2></h2>
+            <p></p>
+        </div>
+        <div class="box">
+            <img src="" alt="">
+            <h1></h1>
+            <h2></h2>
+            <p></p>
+        </div>
+        <div class="box">
+            <img src="" alt="">
+            <h1></h1>
+            <h2></h2>
+            <p></p>
+        </div>
+        <div class="box">
+            <img src="" alt="">
+            <h1></h1>
+            <h2></h2>
+            <p></p>
+        </div>
+        
+        
+    </div>
+
+    <script>
+        let cards = document.querySelectorAll(".box");
+
+        async function getData(){
+
+            let response = await fetch("https://dummyjson.com/products")
+            let data = await response.json()
+            //console.log(data)
+
+            //console.log(data.rec)
+
+            cards.forEach((element,i)=>{
+                element.getElementsByTagName("img")[0].src=data.products[i].images;
+                element.getElementsByTagName("h1")[0].innerHTML=("Title:"+data.products[i].title);
+                element.getElementsByTagName("h2")[0].innerHTML=("Price:"+data.products[i].price);
+               
+                element.getElementsByTagName("img")[0].innerHTML=data.products[i].images.slice(5,14);
+            })
+
+        }
+        getData()
+    </script>
+</body>
+</html>
+    

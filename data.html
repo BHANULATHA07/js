@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <title>Data fetching</title>
+    <style>
+        .box1{
+            display:flex;
+            flex-wrap: wrap;
+            margin: 0;
+            justify-content: center;
+        }
+        .box{
+            display:flex;
+            flex-wrap: wrap;
+            width:200px;
+            border:1px solid;
+            border-radius: 2%;
+            margin: 30px;
+            background-color: bisque;
+            justify-content: center;
+        }
+        .box img{
+            width:200px;
+            height:250px;
+        }
+        .ac{
+            text-align: center;
+        }
+        .head {
+            display: flex;
+            justify-content: end;
+            margin-left: 20px;
+            margin-top: 2px;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="head">
+        <button><a href="index (1).html"><i class="fa-solid fa-right-from-bracket" style="color: #00000f;"></i> Logout</a></button>
+    </div>
+    <div class="ac">
+        <h1>PRODUCTS</h1>
+    </div>
+    <div id="calling" class="box1"></div>
+    <script>
+        let call=document.getElementById('calling');
+        async function getData(){
+            const url=await fetch('https://dummyjson.com/products');
+            let data=await url.json();
+            console.log(data);
+            let mydata=data.products;
+             const myfunction=mydata.map(e=>{
+                return(
+                    `<div class="box">
+                        <img src="${e.images[0]}" height=200px;width=100px;/>
+                        <p>${e.id}</p>
+                        <p>${e.title}</p>
+                      
+
+                    </div>`);
+                
+            }) .join("");
+            call.innerHTML=myfunction;                                                                                                                                                                                                                                                                                                           
+
+           
+        }
+        getData();
+    </script>
+</body>
+</html>
